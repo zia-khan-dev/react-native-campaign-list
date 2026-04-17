@@ -71,6 +71,10 @@ ai-log/                 # Optional export of a Cursor agent transcript (see ai-l
 - **Campaigns / briefs / titles:** `src/data/campaigns.ts`  
 - **Example video URLs:** `src/data/sampleVideoUrls.ts` (use HTTPS hosts that allow mobile streaming; some CDNs return 403 to players)  
 
+## Development time
+
+The Cursor transcript JSONL does not include per-message timestamps. `ai-log/CHAT-EXPORT.md` documents the only **objective** clock span we could attach: **filesystem birth → mtime** on the transcript file (not a human estimate). Re-`stat` that file if you re-export the log.
+
 ## License
 
 Private / internal unless you add a license.

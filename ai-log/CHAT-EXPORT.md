@@ -1,7 +1,28 @@
 # Cursor agent chat export
 
 Source: `cursor-agent-transcript.jsonl` (same content as Cursor agent transcript).
-Exported: 2026-04-17T07:56:00.425Z
+Exported: 2026-04-17
+
+**Time / effort:** The exported `*.jsonl` lines in this session have **no per-message timestamps**—there is nothing to “add up” from the chat text itself. The only **non-estimated** clock signal available here is **filesystem metadata** on the canonical transcript file (when Cursor first created it vs when it was last written). That span is **not** the same as billed work or model latency; it is simply what the OS recorded for that file.
+
+| | Local time (from `stat` on this machine) |
+|--|--|
+| Transcript file **Birth** | 2026-04-17 **11:05:16** |
+| Transcript file **Last modified** | 2026-04-17 **13:05:21** |
+| **Elapsed (mtime − birth)** | **2 h 0 m 5 s** (~**2.00 h**) |
+
+File: `~/.cursor/projects/Users-apple-work-react-native-test/agent-transcripts/c975c30c-2070-4ca4-9064-9a33c8e06557/c975c30c-2070-4ca4-9064-9a33c8e06557.jsonl` — re-run `stat` after re-export if you need updated values.
+
+## Project build count (this session)
+
+Counted from assistant `Shell` runs in `cursor-agent-transcript.jsonl` that verify the app (not `npm install` / `expo install` alone). Counts are **not** a proxy for hours of work.
+
+| Kind | Count | Notes |
+|------|------:|--------|
+| **`npx expo export`** (full Metro bundle to disk) | **3** | **2 succeeded**, **1 failed** (first iOS export: missing `babel-preset-expo`; second iOS export OK; one Android export OK). |
+| **`npx tsc --noEmit`** (TypeScript check) | **4** | Includes runs chained with `expo export` / `expo-doctor`. |
+
+**Summary:** three full export attempts; two successful production-style bundles (iOS + Android). No `expo run:ios` / `expo run:android` native binary builds appear in this transcript.
 
 ---
 

@@ -1,6 +1,6 @@
 # AI chat log export
 
-This folder holds an export of this Cursor agent conversation (creator app / Expo / follow-ups).
+This folder holds an export of this Cursor agent conversation (creator app / Expo / follow-ups). The JSONL has **no** per-message times; `CHAT-EXPORT.md` records **filesystem birth/mtime** on the transcript file as the only non-guessed clock span.
 
 | File | Description |
 |------|-------------|
